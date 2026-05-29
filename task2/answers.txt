@@ -1,0 +1,32 @@
+						ANSWERS
+
+a) A system call (syscall) is a programmatic interface that allows a user-space application to request services, hardware access, or privileged operations directly from the operating system kernel.
+
+b)Some common Linux system calls categorized by their functionality:
+
+[File Management]
+* openat: Opens a file relative to a directory file descriptor, returning a file descriptor for subsequent operations.
+* read: Reads a specified number of bytes from an open file descriptor into a buffer.
+* write: Writes a specified number of bytes from a buffer to an open file descriptor.
+* close: Closes an active file descriptor so it no longer refers to any file and can be reused.
+* lseek: Repositions the read/write file offset within an open file.
+* stat / fstat: Retrieves detailed metadata about a file, such as its size, permissions, and modification time.
+
+[Process Management]
+* fork: Creates a new child process by duplicating the calling parent process.
+* execve: Executes a specified program, completely replacing the current process image, data, and stack.
+* wait4 / waitpid: Suspends the calling process until its child processes have changed their state or terminated.
+* exit: Terminates the calling process immediately, returning an exit status to the parent.
+
+[Memory Management]
+* mmap: Maps files or devices into the process's virtual memory address space, often used for loading shared libraries.
+* munmap: Unmaps a previously allocated memory region mapped by mmap.
+* brk / sbrk: Changes the data segment size of the process, used historically to allocate memory on the heap.
+
+[Network & Inter-process Communication]
+* socket: Creates an endpoint for network or local communication and returns a descriptor.
+* connect: Initiates a connection on a socket to a specified destination address.
+* bind: Assigns a local network address and port to a socket.
+* listen: Marks a stream socket as passive, ready to accept incoming connection requests.
+* accept: Extracts the first connection request on the queue of a listening socket and creates a new connected socket.
+
